@@ -1,10 +1,13 @@
 var argButtonName, buttonPaper, buttonRock, buttonScissors, buttonTest, x,
-    argComputerMove, argMoveId, argPlayerMove, computerMove, playerInput, playerMove, randomNumber;
-
+    argComputerMove, argMoveId, argPlayerMove, computerMove, playerInput, playerMove, randomNumber,
+    computerWins, playerWins;
+   
 buttonTest = document.getElementById('button-test');
 buttonRock = document.getElementById('button-rock');
 buttonPaper = document.getElementById('button-paper');
 buttonScissors = document.getElementById('button-scissors');
+computerWins = 0;
+playerWins = 0; 
 
 /**
  * Describe this function...
@@ -37,16 +40,27 @@ function buttonClicked(argButtonName) {
         console.log('wywołano funkcję displayResults z argumentami: ' + argPlayerMove + ', ' + argComputerMove);
         if (argPlayerMove == 'papier' && argComputerMove == 'kamień') {
         printMessage('Wygrywasz!');
+        playerWins ++;
+        console.log('Gracz wygrał. Dodano 1 do wyniku gracza (playerWins). Obecny wynik gracza: ' + playerWins);
         } else if (argPlayerMove == 'kamień' && argComputerMove == 'nożyce') {
         printMessage('Wygrywasz!');
+        playerWins ++;
+        console.log('Gracz wygrał. Dodano 1 do wyniku gracza (playerWins). Obecny wynik gracza: ' + playerWins);
         } else if (argPlayerMove == 'nożyce' && argComputerMove == 'papier') {
         printMessage('Wygrywasz!');
+        playerWins ++;
+        console.log('Gracz wygrał. Dodano 1 do wyniku gracza (playerWins). Obecny wynik gracza: ' + playerWins);
         } else if (argPlayerMove == argComputerMove) {
         printMessage('Remis!');
         } else {
         printMessage('Przegrywasz :(');
+        computerWins ++;
+        console.log('Komputer wygrał. Dodano 1 do wyniku komputera (computerWins). Obecny wynik komputera: ' + computerWins);
         }
-        printMessage('Zagrałem ' + argComputerMove + ', a Ty ' + argPlayerMove);
+        printMessage('Komputer zagrał ' + argComputerMove + ', a Ty ' + argPlayerMove);
+        printMessage('Suma wygranych rund:');
+        printMessage('Gracz: ' + playerWins);
+        printMessage('Komputer: ' + computerWins);
     }
     playerMove = argButtonName;
     randomNumber = Math.floor(Math.random() * 3 + 1);
