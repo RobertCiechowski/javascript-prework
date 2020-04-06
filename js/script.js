@@ -1,5 +1,5 @@
 var argButtonName, buttonPaper, buttonRock, buttonScissors,
-    computerMove, playerInput, playerMove, randomNumber,
+    computerMove, playerInput, playerMove,
     computerWins, playerWins;
    
 buttonRock = document.getElementById('button-rock');
@@ -14,7 +14,7 @@ playerWins = 0;
 function buttonClicked(argButtonName) {
   clearMessages();
   console.log(argButtonName + ' został kliknięty');
-  let argMoveId, argComputerMove, argPlayerMove;
+  let argMoveId, argComputerMove, argPlayerMove, randomNumber;
 
     /*
         Określenie zagranego "ruchu" przez gracza i komuter
