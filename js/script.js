@@ -1,12 +1,11 @@
 var argButtonName, buttonPaper, buttonRock, buttonScissors,
-    computerMove, playerInput, playerMove,
-    computerWins, playerWins;
-   
+    computerMove, playerInput, playerMove;
+
+let computerWins = 0, playerWins = 0;
+
 buttonRock = document.getElementById('button-rock');
 buttonPaper = document.getElementById('button-paper');
 buttonScissors = document.getElementById('button-scissors');
-computerWins = 0;
-playerWins = 0; 
 
 /*
     Wybór przycisku
@@ -37,6 +36,7 @@ function buttonClicked(argButtonName) {
         Wyświetlanie wyniku gry
     */
     function displayResult(argPlayerMove, argComputerMove) {
+        
         console.log('wywołano funkcję displayResults z argumentami: ' + argPlayerMove + ', ' + argComputerMove);
         if (argPlayerMove == 'papier' && argComputerMove == 'kamień') {
             printMessage('Wygrywasz!');
