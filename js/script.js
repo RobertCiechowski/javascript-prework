@@ -1,4 +1,4 @@
-var argButtonName, buttonPaper, buttonRock, buttonScissors, playerInput;
+var argButtonName, buttonPaper, buttonRock, buttonScissors;
 
 let computerWins = 0, playerWins = 0;
 
