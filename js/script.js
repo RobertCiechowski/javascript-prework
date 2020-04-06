@@ -1,10 +1,8 @@
-var argButtonName, buttonPaper, buttonRock, buttonScissors;
+const buttonPaper = document.getElementById('button-paper'),
+    buttonRock = document.getElementById('button-rock'),
+    buttonScissors = document.getElementById('button-scissors');
 
-let computerWins = 0, playerWins = 0;
-
-buttonRock = document.getElementById('button-rock');
-buttonPaper = document.getElementById('button-paper');
-buttonScissors = document.getElementById('button-scissors');
+let computerWins = 0, playerWins = 0, argButtonName;
 
 /*
     Wybór przycisku
