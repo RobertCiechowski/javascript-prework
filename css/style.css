@@ -1,3 +1,4 @@
+/*   Global   */
 body {
   background-color: #1abc9c;
   font-family: 'Righteous', cursive;
@@ -24,6 +25,7 @@ p {
   margin-top: 40px;
 }
 
+/*   Buttons   */
 .container .button {
   text-align: center;
 }
@@ -47,9 +49,43 @@ button:hover {
   transition: 0.7s;
 }
 
+/*   PrintMessage Styles   */
 #messages {
   margin: 40px;
   line-height: 1.5em;
+  font-size: 20px;
+}
+
+.roundResultWin {
+  color: green;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 0 20px #000;
+  margin-bottom: 30px;
+  font-size: 25px;
+}
+
+.roundResultLoss {
+  color: red;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 0 20px #000;
+  margin-bottom: 30px;
+  font-size: 25px;
+}
+
+.roundResultDraw {
+  color: yellow;
+  text-align: center;
+  text-transform: uppercase;
+  text-shadow: 0 0 20px #000;
+  margin-bottom: 30px;
+  font-size: 25px;
+}
+
+.scoreList {
+  margin: 10px 100px;
+  text-align: center;
   font-size: 25px;
 }
 /*# sourceMappingURL=style.css.map */
